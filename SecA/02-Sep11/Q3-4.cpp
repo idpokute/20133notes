@@ -18,16 +18,13 @@ public:
   double get()const{
     return _c;
   }
-  virtual ostream& display(ostream& os)const{
-    return os<<_c;
-  }
   Container operator+(const Container& Ro)const{
     return Container(this->_c+Ro._c);
   }
 };
 
 ostream& operator<<(ostream& os,const Container& C){
-  return C.display(os);
+  return os<<C.get();
 }
 
 class Box:public Container{
@@ -46,7 +43,4 @@ public:
   Box():Container(1000){
     _w = _h = _l = 10;
   };
-  ostream& display(ostream& os)const{
-    return Container::display(os)<<_w<<_h<<_l;
-  }
 };
