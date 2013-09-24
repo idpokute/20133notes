@@ -3,8 +3,8 @@
 
 class Output{
 public:
-  Output& operator<<(int a);
-  Output& operator<<(const char*);
+  Output& print(int a);
+  Output& print(const char*);
 };
 
 
