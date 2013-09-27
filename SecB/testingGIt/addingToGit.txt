@@ -1,1 +1,2 @@
 Hello there!
+And now I am adding a new line here!
