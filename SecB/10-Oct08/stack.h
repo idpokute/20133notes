@@ -15,10 +15,13 @@ namespace oop344{
     Node* _top;
   public:
     Stack();
+    Stack(const Stack& S);
     virtual ~Stack();
+    void reverse();
     void push(int data);
     int pop();
     bool isEmpty();
+    unsigned int depth();
   };
 
 
