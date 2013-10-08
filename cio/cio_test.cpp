@@ -4,8 +4,8 @@
    con_text.cpp
 
    Fardad Soleimanloo
-   Oct 02, 2013
-   Version 0.95.1
+   Oct 08, 2013
+   Version 0.95.2
 
 
    This program may have bugs, if you find one please report it at
@@ -21,7 +21,7 @@
 */
 
 #define _IOL_PROGRAM_TITLE "Console Input Output Tester Program"
-#define SEMESTER "Fall of 2013 (20133)"   
+#define SEMESTER "Fall of 2013 (20133)"
 #define RELEASE_VERSION "R0.95.1"
 
 
@@ -83,7 +83,7 @@ void PrnMessages(int row, int col, const char *name);
 const char *keycode(int ch);
 const char *keyname(int ch);
 void PrintKeyInfo(int row, int col, int key);
-void bio_printf(int row, int col, int len, char *format, ...);
+void bio_printf(int row, int col, int len,const char *format, ...);
 void PrintHollowBox(int row, int col, int width, int height, char corner, char horizontal, char vertical);
 void PrintLine(int row, int col, int length, int ch, int endings);
 int isWhiteSpace(char ch);
@@ -1071,7 +1071,7 @@ const char *keyname(int ch){
   }
 }
 
-void bio_printf(int row, int col, int len, char *format, ...){
+void bio_printf(int row, int col, int len,const char *format, ...){
   char buf[256] = "";
   char* str = buf;
   int i = 0;
