@@ -9,6 +9,7 @@ namespace oop344{
   Stack::~Stack(){}
 
   int Stack::push(int data){
+    return 0;
   }
 
   int Stack::pop(){
