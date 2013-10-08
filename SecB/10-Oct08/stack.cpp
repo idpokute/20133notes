@@ -8,8 +8,7 @@ namespace oop344{
 
   Stack::~Stack(){}
 
-  int Stack::push(int data){
-    return 0;
+  void Stack::push(int data){
   }
 
   int Stack::pop(){
