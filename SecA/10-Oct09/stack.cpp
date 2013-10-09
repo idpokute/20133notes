@@ -38,6 +38,12 @@ namespace oop344{
   unsigned int Stack::depth(){
   }
 
+  void Stack::reverse(){
+  }
+
+  Stack::Stack(const Stack& S){
+  }
+
 
 
 
