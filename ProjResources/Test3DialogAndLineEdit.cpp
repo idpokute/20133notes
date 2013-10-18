@@ -2,8 +2,8 @@
 // Test3DialogAndLineEdit.cpp
 //
 // Fardad Soleimanloo, Chris Szalwinski
-// Oct 10 2012
-// Version 0.9
+// Oct 18 2012
+// Version 0.91
 
 #include "cio.h"
 #include <cstdio>
@@ -17,20 +17,22 @@ int main(){
   int i = 0;
   bool insert = true;
   char str[81] = "I want to edit this thing!";
-  for(int k=0;k<console.getRows();k+=2){
+  CDialog Screen;
+  for(int k=1;k<console.getRows();k+=2){
     for(int m=0;m<console.getCols()-10;m+=10){
-      console.display((i=!i)?"Hello":"Hi", k, m);
+      Screen<<new CLabel((i=!i)?"Hello": "Hi",k, m, 9);
     }
   }
-  CDialog App;
-  CDialog D(&App, 5, 10, 50, 15, true, "+-+|+-+|");
+  Screen<<new CLabel("Dialog and Line Editor Tester      ", 0, 0);
+
+  CDialog D(&Screen, 5, 10, 50, 15, true, "+-+|+-+|");
   CLabel L("Enter some text down here:",6, 4);
-
-  App<<new CLabel("Dialog and Line Editor Tester", 0, 0);
-
+  Screen.draw();
   D.add(new CLabel("Testing Label and Line edit",1, 12));
   D << new CLabel("Name: ", 4, 3)
-    << new CLineEdit(4,9,20,40,&insert)<< L
+    << new CLineEdit(4,9,20,40,&insert)
+    << new CLabel("Surname: ", 5, 3)
+    << new CLineEdit(5,12,20,50,&insert)<< L
     << new CLineEdit(str,7,4,40,80, &insert, true);
   int mesIndx = D.add(new CLabel(10, 5, 40));
   D << new CLabel("Press ESC or F2 to exit, press F6 to Move", 2, 3);
@@ -54,10 +56,12 @@ int main(){
     }
   }
   console.clear();
-  console.display("First Lineedit data:", 10, 1);
-  console.display((char*)D[2].data(), 11, 0);
-  console.display("Second Linedit data:", 14, 1);
-  console.display((char*)D[4].data(), 15, 0);
+  console.display("First Lineedit data:", 8, 1);
+  console.display((char*)D[2].data(), 9, 0);
+  console.display("Second Lineedit data:", 10, 1);
+  console.display((char*)D[4].data(), 11, 0);
+  console.display("Third Linedit data:", 14, 1);
+  console.display((char*)D[6].data(), 15, 0);
   console.pause();
   return 0;
 }

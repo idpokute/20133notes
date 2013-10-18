@@ -1,4 +1,4 @@
-// Console UI Testers
+// Console Input Output Library Tester program for CFrame
 // Test1Frame.cpp
 //
 // Fardad Soleimanloo, Chris Szalwinski
@@ -23,11 +23,11 @@ int main(){
       Screen<<new CLabel((i=!i)?"Hello": "Hi",k, m, 9);
     }
   }
-  Screen.draw();
   CDialog D(&Screen, 5, 10, 50, 15, true, "+-+|+-+|");
   CLabel L("A Non-dynamic Label goes here",5, 4);
 
-  Screen<<new CLabel("Dialog and Label Tester", 0, 0);
+  Screen<<new CLabel("Dialog and Label Tester   ", 0, 0);
+  Screen.draw();
 
   D.add(new CLabel("Testing Read Only Dialog",1, 12));
   D << new CLabel("Another Dyanmic label goes here, and I want to make sure it will be trimmed", 3, 3, 45) << L;
