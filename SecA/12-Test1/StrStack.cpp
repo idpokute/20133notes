@@ -21,21 +21,13 @@ namespace oop344{
       _top = _top->_next;
       delete toDel;
     }
-  }  
-  //StrStack::~StrStack(){    // if "if(data)" is in pop)
-  //  Node* toDel;
-  //  while(!isEmpty()){
-  //    pop((char*)0);
-  //  }
-  //}
+  }
   void StrStack::push(const char* data){     // 2 marks
     Node* newnode = new Node(data, _top);
     _top = newnode; 
   }
   void StrStack::pop(char* data){       // copying data out 1 mark
-    //if(data){
-      strcpy(data, _top->_data);          // poping 2 marks
-    //}
+    strcpy(data, _top->_data);          // poping 2 marks
     Node* ToDel = _top;
     _top = _top->_next;
     delete ToDel;
