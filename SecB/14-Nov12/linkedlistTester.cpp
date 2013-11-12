@@ -4,7 +4,7 @@ using namespace std;
 using namespace oop344;
 
 int main(){
-  LinkedList L;
+  LinkedList<int> L;
   int i;
   for(i=10;i<100;i+=10){
     L.add(i);

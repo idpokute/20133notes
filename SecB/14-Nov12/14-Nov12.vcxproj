@@ -79,7 +79,6 @@
     <ClInclude Include="linkedlist.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="linkedlist.cpp" />
     <ClCompile Include="linkedlistTester.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
