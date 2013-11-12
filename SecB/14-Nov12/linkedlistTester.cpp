@@ -12,5 +12,8 @@ int main(){
   while(!L.isEmpty()){
     cout<<L.remove()<<endl;
   }
+  for(i=10;i<50;i+=10){
+    L.add(i);
+  }
   return 0;
 }

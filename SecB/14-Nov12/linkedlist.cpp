@@ -33,10 +33,21 @@ namespace oop344{
     }
   }
   int LinkedList::remove(){
-    return 0;
+    int ret = _head->_data;
+    //auto toRem = _head;
+    Node* toRem = _head;
+    _head = _head->_next;
+    if(_head){  // not empty
+      _head->_prev = NullNptr;
+    }
+    else{
+      _tail = NullNptr;
+    }
+    delete toRem;
+    return ret;
   }
   bool LinkedList::isEmpty(){
-    return true;
+    return !_head;
   }
 
 
