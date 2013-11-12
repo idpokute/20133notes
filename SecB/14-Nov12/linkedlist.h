@@ -1,8 +1,12 @@
 #ifndef __344_LINKEDLIST__
 #define __344_LINKEDLIST__
 namespace oop344{
-  class LinkedList;
+#ifdef NullNptr
+#undef NullNptr
+#endif
+#define NullNptr ((Node*)0)
 
+  class LinkedList;
   class Node{
     Node* _next;
     Node* _prev;
@@ -17,6 +21,9 @@ namespace oop344{
   public:
     LinkedList();
     virtual ~LinkedList();
+    void add(int);
+    int remove();
+    bool isEmpty();
   };
 
 
