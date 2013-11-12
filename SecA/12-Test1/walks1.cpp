@@ -30,8 +30,8 @@ void w3(){
   x = mul(x+4, y);
 #endif
 #ifdef V2
-  x = mul(x, y+4);
-#endif
+  x = mul(x, y+4); // (x * y+4)  (x*y)+4
+ #endif
   cout<<x<<endl;
 }
 void w4(void* p){

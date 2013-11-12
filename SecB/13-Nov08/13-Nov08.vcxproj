@@ -11,16 +11,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="StrStack.cpp" />
-    <ClCompile Include="strStackTester.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="StrStack.h" />
+    <ClCompile Include="prg.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{1F3E15F8-CCF9-4344-8653-3B1E055E96AF}</ProjectGuid>
+    <ProjectGuid>{DA716662-52F6-4311-A004-52E9C0F9005D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>My12Test1</RootNamespace>
+    <RootNamespace>My13Nov08</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

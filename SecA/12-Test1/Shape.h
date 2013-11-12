@@ -24,7 +24,8 @@ namespace oop344{       // 1 mark
     bool _solid;
   public:     
     Shape();   //constructors 2 marks     
-    Shape(Color color, Coordinates coord, int width= 0, int hieght=0, bool solid=true); // default args 1 mark
+    Shape(Color color, Coordinates coord, int width= 0, int hieght=0, 
+                 bool solid=true); // default args 1 mark
     virtual void draw() = 0;     // pure virtual 2 marks
     virtual void hide() = 0;
     void move(Coordinates coord);  // moves 2 marks
