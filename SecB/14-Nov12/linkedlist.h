@@ -11,7 +11,13 @@ namespace oop344{
     friend class LinkedList;
   };
 
-
+  class LinkedList{
+    Node* _head;
+    Node* _tail;
+  public:
+    LinkedList();
+    virtual ~LinkedList();
+  };
 
 
 
