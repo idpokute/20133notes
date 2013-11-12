@@ -22,6 +22,13 @@ namespace oop344{
       delete toDel;
     }
   }
+  //StrStack::~StrStack(){     // if you have done the pop with "if(data)"
+  //  Node* toDel;
+  //  while(!isEmpty()){
+  //    pop((char*)0);
+  //  }
+  //}
+
   void StrStack::push(const char* data){     // 2 marks
     Node* newnode = new Node(data, _top);
     _top = newnode; 
@@ -32,6 +39,14 @@ namespace oop344{
     _top = _top->_next;
     delete ToDel;
   }
+  //void StrStack::pop(char* data){ 
+  //  if(data){
+  //    strcpy(data, _top->_data);
+  //  }
+  //  Node* ToDel = _top;
+  //  _top = _top->_next;
+  //  delete ToDel;
+  //}
   bool StrStack::isEmpty()const{   // 1 mark
     return !_top;
   }
