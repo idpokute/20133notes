@@ -11,7 +11,7 @@ namespace oop344{
     Node* _next;
     Node* _prev;
     int _data;
-    Node(int data, Node* prev, Node* next);
+    Node(int data, Node* prev, Node* next=NullNptr);
     friend class LinkedList;
   };
 

@@ -20,7 +20,17 @@ namespace oop344{
       delete toDel;
     }
   }
-  void LinkedList::add(int){
+  void LinkedList::add(int data){
+    Node* NN = new Node(data, _tail);
+    if(!isEmpty()){
+      _tail->_next = NN;
+      // NN->_prev->_next = NN; crazy version of the prev line
+      _tail = NN;
+      // _tail = _tail->_next; same as previous
+    }
+    else{
+      _tail = _head = NN;
+    }
   }
   int LinkedList::remove(){
     return 0;
