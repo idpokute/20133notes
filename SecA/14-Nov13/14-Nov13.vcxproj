@@ -76,7 +76,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="linkedlist.cpp" />
     <ClCompile Include="linkedlistTester.cpp" />
   </ItemGroup>
   <ItemGroup>
