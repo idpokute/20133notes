@@ -37,6 +37,10 @@ namespace oop344{
     T pop();
     T remove(); 
     void add(T);
+    T& operator[](int index); // if index is passed the size of the list
+                              // make nodes with default data to accomodate it ...
+                              // hense int needs to be able to be defaulted
+
     bool isEmpty();
   };
   template <class T>
