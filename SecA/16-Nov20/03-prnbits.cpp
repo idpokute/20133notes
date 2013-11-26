@@ -32,7 +32,7 @@ bool isOn(unsigned int val, unsigned int bitNo){
 //  for(unsigned int i = sizeof(int)*8; i--;cout<<bool(val & 1 << (i-1)));
 //}
 void prnBits(unsigned int val){
-  for(unsigned int i = sizeof(int)*8; i--;cout<<!!(val & 1 << (i-1)));
+  for(unsigned int i = sizeof(int)*8; i--;cout<<!!(val & 1 << (i)));
 }
 //void prnBits(unsigned int val){
 //  for(unsigned int i = sizeof(int)*8; i--;(val & 1 << (i-1))?'1':'0');
