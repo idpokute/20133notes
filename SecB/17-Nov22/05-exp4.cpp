@@ -5,7 +5,7 @@ class MyExp{
   char 
     message[256];
 public:
-  MyExp(const char *Message = ""){
+  MyExp(const char* Message = ""){
     strncpy(message, Message, 256);
     message[255] = 0;
   }
